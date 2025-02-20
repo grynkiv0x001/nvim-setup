@@ -1,1 +1,1 @@
-require('grynkiv0x001.remap')
+require("grynkiv0x001.remap")

@@ -1,14 +1,13 @@
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 local keymap = vim.keymap
-local cmd = vim.cmd
 
 -- general
-keymap.set('n', '<leader>cl', ':nohl<CR>')
-keymap.set('n', '<leader>q', ':Ex<CR>') -- go to file tree :Ex
+keymap.set("n", "<leader>cl", ":nohl<CR>")
+keymap.set("n", "<leader>q", ":Ex<CR>") -- go to file tree :Ex
 
 -- have a delete key
-keymap.set('i', '<C-l>', '<Del>')
+keymap.set("i", "<C-l>", "<Del>")
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
@@ -32,7 +31,7 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 keymap.set("n", "<leader>m", ":MaximizerToggle<CR>")
 
 -- nvim-tree plugin
-keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>")
+keymap.set("n", "<C-e>", ":NvimTreeToggle<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -49,4 +48,3 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
-
