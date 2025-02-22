@@ -97,6 +97,7 @@ return packer.startup(function(use)
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({ "bluz71/vim-moonfly-colors", as = "moonfly" })
 	use({ "rebelot/kanagawa.nvim", as = "kanagawa" })
+	use({ "projekt0n/github-nvim-theme", as = "github" })
 
 	-- highlights
 	use({

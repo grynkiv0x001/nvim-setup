@@ -19,10 +19,14 @@ null_ls.setup({
 		--  "formatting.prettier.with({disabled_filetypes = {}})" (see null-ls docs)
 		formatting.eslint, -- js/ts formatter
 		formatting.stylua, -- lua formatter
-		diagnostics.eslint,
+		diagnostics.eslint.with({
+			condition = function(utils)
+				return utils.root_has_file({ ".eslintrc.*", "eslint.config.mjs" }) -- change file extension if you use something else
+			end,
+		}),
 	},
 	-- configure format on save
-  on_attach = function(current_client, bufnr)
+	on_attach = function(current_client, bufnr)
 		if current_client.supports_method("textDocument/formatting") then
 			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 			vim.api.nvim_create_autocmd("BufWritePre", {

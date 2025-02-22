@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/grynkiv0x001/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  github = {
+    loaded = true,
+    path = "/Users/grynkiv0x001/.local/share/nvim/site/pack/packer/start/github",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/grynkiv0x001/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
